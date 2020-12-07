@@ -67,7 +67,7 @@ def ack():
 		dt_str = now.strftime("%Y/%m/%d-%H:%M:%S")
 		print (dt_str)
 
-		log_str= env_name+","+result_val+","+release_deployed+","+dt_str
+		log_str= env_name+","+result_val+","+release_deployed+","+dt_str+"ok"
 		log_json = json.dumps (log_str)
 		#with open ("deployment.log", "r+") as fw:
 		#	fw.write(log_str)
