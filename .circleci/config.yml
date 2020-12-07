@@ -1,0 +1,29 @@
+version: 2.1
+
+orbs:
+  python: circleci/python@0.2.1
+
+jobs:
+  build-and-test:
+    executor: python/default
+    steps:
+      - checkout
+      - python/load-cache
+      - python/install-deps
+      - python/save-cache
+      - run:
+          #command: ./manage.py test
+          #name: Test
+          command: echo "flask" > requirements.txt ; echo "zappa" >> requirements.txt
+          name: Create requirements file
+      - run: 
+          command: pip install -r requirements.txt
+          name: Installing requirements
+      - run: 
+          command: zappa deploy prod
+          name: Deploying to prod using zappa
+
+workflows:
+  main:
+    jobs:
+      - build-and-test
