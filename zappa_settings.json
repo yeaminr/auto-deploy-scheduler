@@ -2,7 +2,7 @@
     "prod": {
         "app_function": "deployment_server.app",
         "aws_region": "ap-southeast-2",
-        "profile_name": "default",
+        "profile_name": "prod",
         "project_name": "auto-deploy-sch",
         "runtime": "python3.8",
         "s3_bucket": "hyperanna-auto-deploy-scheduler-zappa"
