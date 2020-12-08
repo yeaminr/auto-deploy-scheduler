@@ -36,7 +36,7 @@ jobs:
           command: |
             virtualenv .env -p python3
             source .env/bin/activate
-            zappa deploy prod
+            zappa update prod
           name: Deploying to prod using zappa
 
 workflows:
