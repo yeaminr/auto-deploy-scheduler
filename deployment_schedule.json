@@ -10,7 +10,7 @@
         "deploy_time": "2020-11-26:19:00"
     },
     {
-        "environment": "yeamin-uat3",
+        "environment": "grapes-red",
         "release": "RELEASE_2020.12.02.08.00.36.00",
         "deploy_time": "2020-11-26:19:00"
     }
