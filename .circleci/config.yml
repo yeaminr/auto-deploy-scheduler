@@ -14,10 +14,10 @@ jobs:
       - run:
         name: Set AWS Credentials
           command: |
-            echo 'aws configure --profile default set aws_access_key_id $AWS_ACCESS_KEY_ID'
-            echo 'aws configure --profile default set aws_secret_access_key $AWS_SECRET_ACCESS_KEY'
-            echo 'aws configure --profile default set region $AWS_DEFAULT_REGION'
-            echo 'aws configure --profile default list'
+            echo aws configure --profile default set aws_access_key_id $AWS_ACCESS_KEY_ID
+            echo aws configure --profile default set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+            echo aws configure --profile default set region $AWS_DEFAULT_REGION
+            echo aws configure --profile default list
       - run:
           #command: ./manage.py test
           #name: Test
