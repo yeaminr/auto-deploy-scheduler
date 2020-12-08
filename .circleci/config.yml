@@ -12,6 +12,12 @@ jobs:
       #- python/install-deps
       #- python/save-cache
       - run:
+          command: virtualenv .env -p python3
+          name: Install virtualenv
+      - run:
+          command: source .env/bin/activate
+          name: Activate virtualenv
+      - run:
           #command: ./manage.py test
           #name: Test
           command: echo "flask" > requirements.txt ; echo "zappa" >> requirements.txt; echo "awscli" >> requirements.txt
