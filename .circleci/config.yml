@@ -11,12 +11,12 @@ jobs:
       #- python/load-cache
       #- python/install-deps
       #- python/save-cache
-      - run:
-          command: virtualenv .env -p python3
-          name: Install virtualenv
-      - run:
-          command: source .env/bin/activate
-          name: Activate virtualenv
+#      - run:
+#          command: virtualenv .env -p python3
+#          name: Install virtualenv
+#      - run:
+#          command: source .env/bin/activate
+#          name: Activate virtualenv
       - run:
           #command: ./manage.py test
           #name: Test
@@ -33,7 +33,10 @@ jobs:
             aws configure --profile prod set region $AWS_DEFAULT_REGION
             aws configure --profile prod list
       - run:
-          command: zappa deploy prod
+          command: |
+            virtualenv .env -p python3
+            source .env/bin/activate
+            zappa deploy prod
           name: Deploying to prod using zappa
 
 workflows:
