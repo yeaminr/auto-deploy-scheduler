@@ -40,7 +40,7 @@ def query():
 					env_not_found = 1
 
 			if env_not_found ==	0:
-				ret = "pass env as query string"
+				ret = "Please pass env as query string"
 
 		return ret, 200
 	else:
@@ -67,7 +67,7 @@ def ack():
 		dt_str = now.strftime("%Y/%m/%d-%H:%M:%S")
 		print (dt_str)
 
-		log_str= env_name+","+result_val+","+release_deployed+","+dt_str+"ok"
+		log_str= env_name+","+result_val+","+release_deployed+","+dt_str
 		log_json = json.dumps (log_str)
 		#with open ("deployment.log", "r+") as fw:
 		#	fw.write(log_str)
