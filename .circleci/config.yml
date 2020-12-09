@@ -12,27 +12,14 @@ jobs:
           command: |
             virtualenv .env -p python3
             source .env/bin/activate
-          name: Create and source virtualenv
-      - run:
-          command: echo "flask" > requirements.txt ; echo "zappa" >> requirements.txt; echo "awscli" >> requirements.txt
-          name: Create requirements file
-      - run: 
-          command: pip install -r requirements.txt
-          name: Installing requirements
-      - run:
-          name: Set AWS Credentials
-          command: |
+            echo "flask" > requirements.txt ; echo "zappa" >> requirements.txt; echo "awscli" >> requirements.txt
+            pip install -r requirements.txt
             aws configure --profile prod set aws_access_key_id $AWS_ACCESS_KEY_ID
             aws configure --profile prod set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
             aws configure --profile prod set region $AWS_DEFAULT_REGION
             aws configure --profile prod list
-      - run:
-          command: zappa update prod
-#          command: |
-#            virtualenv .env -p python3
-#            source .env/bin/activate
-#            zappa update prod
-          name: Deploying update to prod using zappa
+            zappa update prod
+          name: All tasks for deploying using zappa
 
 workflows:
   main:
