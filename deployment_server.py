@@ -69,7 +69,7 @@ def ack():
 
 		log_str= env_name+","+result_val+","+release_deployed+","+dt_str
 		log_json = json.dumps (log_str)
-		with open ("deployment.log", "r+") as fw:
+		with open ("deployment.log", "a") as fw:
 			fw.write(log_str)
 
 		return log_json , 200
