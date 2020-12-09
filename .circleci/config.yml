@@ -27,10 +27,11 @@ jobs:
             aws configure --profile prod set region $AWS_DEFAULT_REGION
             aws configure --profile prod list
       - run:
-          command: |
+          command: zappa update prod
+#          command: |
 #            virtualenv .env -p python3
 #            source .env/bin/activate
-            zappa update prod
+#            zappa update prod
           name: Deploying update to prod using zappa
 
 workflows:
