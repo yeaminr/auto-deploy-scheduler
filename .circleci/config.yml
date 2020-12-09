@@ -12,7 +12,10 @@ jobs:
           command: echo "flask" > requirements.txt ; echo "zappa" >> requirements.txt; echo "awscli" >> requirements.txt
           name: Create requirements file
       - run: 
-          command: pip install -r requirements.txt
+          command: |
+            virtualenv .env -p python3
+            source .env/bin/activate
+            pip install -r requirements.txt
           name: Installing requirements
       - run:
           name: Set AWS Credentials
