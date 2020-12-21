@@ -3,7 +3,7 @@ A Python Flask application that works as a central deployment scheduler server f
 
 ## Auto deployment solution
 
-Given the increasing number of clients with on-prem environments, we have decided to start automating the deployment process to minimize the effort required to guarantee Anna is released continuously across our environments. 
+Given the increasing number of clients with on-prem environments, we have decided to automate the deployment process to minimize the effort required to release Anna continuously across our environments. 
 
 Deployments are still triggered manually but can now be scheduled in advance, requiring the deployer only to observe as to guarantee a pain-free deployment.
 
