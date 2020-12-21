@@ -62,7 +62,7 @@ In the future, `deploy_time` will control when deployment gets triggered in the 
 
 Even though deployment is becoming more automated, the expectation for the deployer is to ensure environments get the latest release on a regular schedule, and that potential deployment issues are addressed accordingly when needed. It's important to consider timezone differences and downtime when scheduling deployments for on-prem environments.
 
-To help deployers work with auto deployment, notifications, health checks, and logging were introduced. It's important to use them to guarantee a smooth deployment process.
+To help deployers work with auto deployment, notifications, health checks, and logging were introduced. It's essential to use them to guarantee a smooth deployment process.
 
 ## Auto deployment notifications
 Check slack channel `#deployment` with the following messages to understand what is happening with auto deployment:
