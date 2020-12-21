@@ -43,7 +43,7 @@ The following environments have auto-deploy client script running with the respe
 
 ## Deployment schedule file
 
-On-Premise deployment is controlled by the deployment schedule file containing a list of multiple environments and their expected release.\
+On-Premise deployment is controlled by the deployment schedule file `deployment_schedule.json`. This file contains a list of multiple environments and their expected release.\
 Currently, only the fields `environment` and `release` are being used. The field `deploy_time` it's ignored.
 
 In the future, `deploy_time` will control when deployment gets triggered in the environment, meaning `not before` the listed time.
