@@ -3,11 +3,11 @@ A Python Flask application that works as a central deployment scheduler server f
 
 ## Auto deployment solution
 
-Given the increasing number of clients with on-prem environments, we have decided to start automating the deployment process to minimize the effort required to guarantee Anna is released continuously acorss our environments. 
+Given the increasing number of clients with on-prem environments, we have decided to start automating the deployment process to minimize the effort required to guarantee Anna is released continuously across our environments. 
 
-Deployments are still triggered manually but can now be scheduled in advance, requiring the deployer to only observe as to guarantee a pain free deployment.
+Deployments are still triggered manually but can now be scheduled in advance, requiring the deployer only to observe as to guarantee a pain-free deployment.
 
-Auto deployment runs a client script on premise servers and a lambda app in AWS checking for newly released versions and triggering deployments automatically.
+Auto deployment runs a client script in all on-premise servers calling a lambda app in AWS to check for newly released versions and triggers deployments automatically when necessary.
 <br/>
 <br/>
 
@@ -21,14 +21,14 @@ This script performs the following tasks:
 
 * Obtain the deployed release on the current environment.
 * Call auto deploy server to check what should be the release for the current environment.
-* Trigger a deployment with the new release when expected version is newer.
-* Notifiy appropriate slack channels that a new release was triggered.
+* Trigger a deployment with the new release when the expected version is newer.
+* Notify appropriate slack channels that a new release was triggered.
 
 ## Current schedule
 
 All environments currently run the schedule once a day at `1800` hours on their local timezone.
 
-The following environments have auto deploy client script running with the current timezone configuration:
+The following environments have auto-deploy client script running with the current timezone configuration:
 
 | Environment | Timezone     | Australia/Sydney Timezone |
 | :-----------| :----------: | --------------------:     |
@@ -43,10 +43,10 @@ The following environments have auto deploy client script running with the curre
 
 ## Deployment schedule file
 
-On-Premise deployment is controlled by the deployment schedule file containing a list of mutliple environments and their expected release.\
-Currently only the fields `environment` and `release` are being used. The field `deploy_time` it's ignored, thus all deployments run at 1800 hours on the timezone.
+On-Premise deployment is controlled by the deployment schedule file containing a list of multiple environments and their expected release.\
+Currently, only the fields `environment` and `release` are being used. The field `deploy_time` it's ignored, thus all deployments run at 1800 hours on the timezone.
 
-In the future, `deploy_time` will control when deployment gets triggered in the environment meaning `not before` listed time.
+In the future, `deploy_time` will control when deployment gets triggered in the environment, meaning `not before` listed time.
 
 ```json
 [
@@ -60,7 +60,7 @@ In the future, `deploy_time` will control when deployment gets triggered in the 
 
 ## Deployment oversight and debugging.
 
-Even though deployment is becoming more automated, the expectation for the deployer is to ensure environments get the latest release on a regular schedule, and that potential deployment issues are address acordingly when needed. It's important to consider timezone differences and downtime when scheduling deployments for on-prem environments.
+Even though deployment is becoming more automated, the expectation for the deployer is to ensure environments get the latest release on a regular schedule, and that potential deployment issues are addressed accordingly when needed. It's important to consider timezone differences and downtime when scheduling deployments for on-prem environments.
 
 To help deployers work with auto deployment, notifications, health checks, and logging has been introduced. It's important to use them to guarantee a smooth deployment process.
 
@@ -73,7 +73,7 @@ Auto-deployer APP  18:13
 Deploying RELEASE_2020.12.16.06.12.07.00 in ip-10-219-132-29 of analytics.nai.transport.nsw.gov.au ...
 ```
 
-### Deployment finished successfuly.
+### Deployment finished successfully.
 ```
 Deployer APP  18:19
 ####### Pacemaker reports All containers are Healthy after Deployment of RELEASE_2020.12.16.06.12.07.00 in ip-10-219-132-29 of analytics.nai.transport.nsw.gov.au :) #######
@@ -111,4 +111,4 @@ git clone git@github.com:hyperanna01/auto-deploy-scheduler.git
 <br/>
 A circleci pipeline will deploy the changes into an AWS Lambda deployment that is running a Python Flask webserver. 
 
-Deployers are not required to use pull request / pair review process to trigger deployments, however pair review can be a helpful tool for critical deployments,  specially when issues arise. 
+Deployers are not required to use pull request / pair review process to trigger deployments; however, pair review can be a helpful tool for critical deployments,  especially when issues arise. 
