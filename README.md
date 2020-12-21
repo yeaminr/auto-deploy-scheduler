@@ -44,6 +44,7 @@ The following environments have auto-deploy client script running with the respe
 ## Deployment schedule file
 
 On-Premise deployment is controlled by the deployment schedule file `deployment_schedule.json`. This file contains a list of multiple environments and their expected release.\
+This file runs with the AWS Lambda service and it's used as source of truth for releases across environments. Changing this file in this repo causes a new version of the auto deployment server to update its copy.\
 Currently, only the fields `environment` and `release` are being used. The field `deploy_time` it's ignored.
 
 In the future, `deploy_time` will control when deployment gets triggered in the environment, meaning `not before` the listed time.
