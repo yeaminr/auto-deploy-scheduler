@@ -5,7 +5,7 @@ A Python Flask application that works as a central deployment scheduler server f
 
 Given the increasing number of clients with on-prem environments, we have decided to automate the deployment process to minimize the effort required to release Anna continuously across our environments. 
 
-Deployments are still triggered manually but can now be scheduled in advance, requiring the deployer only to observe as to guarantee a pain-free deployment.
+Deployments are still triggered manually but can now be scheduled in advance, requiring the deployer only to observe as to guarantee a bug-free deployment.
 
 Auto deployment runs a client script in all on-premise servers calling a lambda app in AWS to check for newly released versions and triggers deployments automatically when necessary.
 <br/>
