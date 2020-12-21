@@ -13,22 +13,22 @@ Auto deployment runs a client script in all on-premise servers calling a lambda 
 
 ## Auto Deployment Client.
 
-The environments listed below run the script below on a recurring schedule.
+The environments listed below run the auto deployment client script on a recurring schedule.
 ```shell
 /opt/hyperanna/bin/run-deploy.sh
 ```
 This script performs the following tasks:
 
-* Obtain the deployed release on the current environment.
-* Call auto deploy server to check what should be the release for the current environment.
-* Trigger a deployment with the new release when the expected version is newer.
-* Notify appropriate slack channels that a new release was triggered.
+* Obtains the deployed release on the current environment.
+* Calls auto deploy server to check what should be the release for the current environment.
+* Triggers a deployment with the new release when the expected version is newer.
+* Notifies appropriate slack channels that a new release was triggered.
 
 ## Current schedule
 
-All environments currently run the schedule once a day at `1800` hours on their local timezone.
+All environments currently run the script once a day at `1800` hours on their local timezone.
 
-The following environments have auto-deploy client script running with the current timezone configuration:
+The following environments have auto-deploy client script running with the respective timezone configurations:
 
 | Environment | Timezone     | Australia/Sydney Timezone |
 | :-----------| :----------: | --------------------:     |
