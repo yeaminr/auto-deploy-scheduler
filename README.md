@@ -111,4 +111,6 @@ git clone git@github.com:hyperanna01/auto-deploy-scheduler.git
 <br/>
 A circleci pipeline will deploy the changes into an AWS Lambda deployment that is running a Python Flask webserver. 
 
+On the next scheduled calls comming from auto deployment client script the new release will be deployment for the updated environments. 
+
 Deployers are not required to use pull request / pair review process to trigger deployments; however, pair review can be a helpful tool for critical deployments,  especially when issues arise. 
