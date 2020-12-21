@@ -13,7 +13,7 @@ Auto deployment runs a client script in all on-premise servers calling a lambda 
 
 ## Auto Deployment Client.
 
-The environments listed below run the auto deployment client script on a recurring schedule.
+All environments should run the auto deployment client script on a recurring schedule. The client script can be found at:
 ```shell
 /opt/hyperanna/bin/run-deploy.sh
 ```
