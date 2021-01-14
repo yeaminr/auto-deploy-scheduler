@@ -1,33 +1,32 @@
 [
     {
         "environment": "acai",
-        "release": "RELEASE_2021.01.07.04.00.56.00",
+        "release": "RELEASE_2021.01.14.00.00.33.00",
         "deploy_time": "2020-11-26:17:00"
     },
     {
         "environment": "guava",
-        "release": "RELEASE_2021.01.07.04.00.56.00",
+        "release": "RELEASE_2021.01.14.00.00.33.00",
         "deploy_time": "2020-11-26:19:00"
     },
     {
         "environment": "grapes-uat",
-        "release": "RELEASE_2021.01.07.04.00.56.00",
+        "release": "RELEASE_2021.01.14.00.00.33.00",
         "deploy_time": "2020-12-10:19:00"
     },
     {
         "environment": "grapes-prod",
-        "release": "RELEASE_2021.01.07.04.00.56.00",
+        "release": "RELEASE_2021.01.14.00.00.33.00",
         "deploy_time": "2020-11-26:19:00"
     },
     {
         "environment": "prod-sg",
-        "release": "RELEASE_2021.01.07.04.00.56.00",
+        "release": "RELEASE_2021.01.14.00.00.33.00",
         "deploy_time": "2020-11-26:19:00"
     },
     {
         "environment": "bayberry",
-        "release": "RELEASE_2021.01.07.04.00.56.00",
+        "release": "RELEASE_2021.01.14.00.00.33.00",
         "deploy_time": "2020-11-26:19:00"
     }
 ]
-
