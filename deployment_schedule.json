@@ -29,4 +29,9 @@
         "release": "RELEASE_2021.01.28.06.00.34.00",
         "deploy_time": "2020-11-26:19:00"
     }
+    {
+        "environment": "citrus",
+        "release": "RELEASE_2021.01.28.06.00.34.00",
+        "deploy_time": "2020-11-26:19:00"
+    }
 ]
