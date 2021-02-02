@@ -1,7 +1,7 @@
 [
     {
         "environment": "acai",
-        "release": "RELEASE_2021.01.28.06.00.34.00",
+        "release": "RELEASE_2021.02.02.06.01.19.00",
         "deploy_time": "2020-11-26:17:00"
     },
     {
@@ -11,12 +11,12 @@
     },
     {
         "environment": "grapes-uat",
-        "release": "RELEASE_2021.01.28.06.00.34.00",
+        "release": "RELEASE_2021.02.02.06.01.19.00",
         "deploy_time": "2020-12-10:19:00"
     },
     {
         "environment": "grapes-prod",
-        "release": "RELEASE_2021.01.28.06.00.34.00",
+        "release": "RELEASE_2021.02.02.06.01.19.00",
         "deploy_time": "2020-11-26:19:00"
     },
     {
@@ -26,12 +26,12 @@
     },
     {
         "environment": "bayberry",
-        "release": "RELEASE_2021.01.28.06.00.34.00",
+        "release": "RELEASE_2021.02.02.06.01.19.00",
         "deploy_time": "2020-11-26:19:00"
-    }
+    },
     {
         "environment": "citrus",
-        "release": "RELEASE_2021.01.28.06.00.34.00",
+        "release": "RELEASE_2021.02.02.06.01.19.00",
         "deploy_time": "2020-11-26:19:00"
     }
 ]
