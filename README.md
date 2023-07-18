@@ -1,6 +1,9 @@
 # auto-deploy-scheduler
 A Python Flask application that works as a central deployment scheduler server for on-prem clients
 
+![Auto_Deploy_Scheduler_Whiteboard](https://github.com/yeaminr/auto-deploy-scheduler/assets/33312017/d9972735-76b0-42d4-bbf2-93b65a286952)
+
+
 ## Auto deployment solution
 
 Given the increasing number of clients with on-prem environments, we have decided to automate the deployment process to minimize the effort required to release Anna continuously across our environments. 
